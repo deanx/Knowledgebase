@@ -1,0 +1,13 @@
+<p>
+  <b>Titulo:</b>
+  <%=h @conhecimento.titulo %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%=h @conhecimento.texto %>
+</p>
+
+
+<%= link_to 'Edit', edit_conhecimento_path(@conhecimento) %> |
+<%= link_to 'Back', conhecimentos_path %>

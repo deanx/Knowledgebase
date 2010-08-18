@@ -1,0 +1,22 @@
+<h1>Listing conhecimentos</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Texto</th>
+  </tr>
+
+<% for conhecimento in @conhecimentos %>
+  <tr>
+    <td><%=h conhecimento.titulo %></td>
+    <td><%=h conhecimento.texto %></td>
+    <td><%= link_to 'Show', conhecimento %></td>
+    <td><%= link_to 'Edit', edit_conhecimento_path(conhecimento) %></td>
+    <td><%= link_to 'Destroy', conhecimento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New conhecimento', new_conhecimento_path %>

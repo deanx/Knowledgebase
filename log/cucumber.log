@@ -1,0 +1,52 @@
+# Logfile created on Sat Aug 14 18:01:30 -0300 2010  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET FOREIGN_KEY_CHECKS = 1[0m
+
+
+Processing ConhecimentosController#index (for 127.0.0.1 at 2010-08-14 20:27:09) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mConhecimento Load (0.0ms)[0m   [0;1mMysql::Error: Table 'knowledge_base_test.conhecimentos' doesn't exist: SELECT * FROM `conhecimentos` [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET FOREIGN_KEY_CHECKS = 1[0m
