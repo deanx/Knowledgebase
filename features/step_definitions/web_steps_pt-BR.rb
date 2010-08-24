@@ -12,6 +12,14 @@ Dado /^que eu esteja na (.+)$/ do |page_name|
   Given %{I am on #{page_name}}
 end
 
+Dado  /^que tenha conhecimentos cadastrados$/ do
+  Given %{I have knowledges registered}
+end
+
+Dado  /^que tenha autores cadastrados$/ do
+  Given %{I have authors registered}
+end
+
 Quando /^eu vou para (.+)$/ do |page_name|
   When %{I go to #{page_name}}
 end
@@ -142,4 +150,12 @@ end
 
 Então /^mostre-me a página$/ do
   Then %{show me the page}
+end
+
+Então /^a tabela "([^"]*)" deve ter ([0-9]+) linhas$/ do |id_tabela, num_linhas|
+  Then %{the "#{id_tabela}" should have #{num_linhas} lines}
+end
+
+Então /^a tabela "([^"]*)" deve ter ao menos ([0-9]+) linhas$/ do |id_tabela, num_linhas|
+  Then %{the "#{id_tabela}" should have at least #{num_linhas} lines}
 end

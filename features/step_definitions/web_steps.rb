@@ -17,9 +17,10 @@ end
 World(WithinHelpers)
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit "http://localhost:9887/conhecimentos/"
-  #visit path_to(page_name)
+  visit path_to(page_name)
 end
+
+
 
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
@@ -33,7 +34,9 @@ end
 
 When /^(?:|I )follow "([^"]*)"(?: within "([^"]*)")?$/ do |link, selector|
   with_scope(selector) do
+	
     click_link(link)
+	selenium.chooseOkOnNextConfirmation()
   end
 end
 
@@ -217,4 +220,13 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+Then /^the "([^"]*)" should have ([0-9]+) lines$/ do |table_id, num_rows|
+	assert_equal tableish('table#label tr', 'th,td').size, num_rows
+end
+
+Then /^the "([^"]*)" should have at least ([0-9]+) lines$/ do |table_id, num_rows|
+	table = tableish("table#" + table_id + " tr", 'td,th')
+	assert table.size >= num_rows.to_i
 end

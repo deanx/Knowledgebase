@@ -1,0 +1,88 @@
+body {
+	margin:0px;
+	padding:0px;
+	background-color:#E5E5E5
+	
+}
+
+#menu_header {
+	width:800px;
+	text-align:left;
+	font-family:tahoma;
+	font-size:10pt;
+	background-color:black;
+	color:#FF6600;
+	padding:10px;
+	margin:0px;
+	float:left;
+	
+}
+
+#menu_header a{
+	color:orange;
+	font-family:arial;
+	text-decoration:none;
+	padding:8px;
+}
+
+#menu_header a:hover{
+	color:white;
+}
+
+#box_conhecimentos	{
+	background-color:white;
+	width:800px;
+	text-align:center;
+	margin:0px;
+	display:inline;
+
+}
+
+#box_conhecimentos_home h1	{
+	background-color:white;
+	font-family:arial;
+	font-size:12pt;
+	padding-left:5px;
+	color:red;
+}
+
+#box_autores_home h1	{
+	font-family:arial;
+	font-size:12pt;
+	padding-left:5px;
+	color:red;
+}
+
+#conhecimentos 	{
+	background-color:white;
+}
+#conhecimentos tr  {
+	font-family:arial;
+
+}
+
+#conhecimentos tr th	{
+	color:red
+}
+
+
+
+#lista_autores 	{
+	background-color:white;
+}
+
+#lista_autores tr  {
+
+	font-family:arial;
+}
+
+#lista_autores tr th	{
+	color:red
+}
+
+#content_home	{
+	background-color:white;
+	width:820px;
+	padding:0px;
+	margin:0px;
+}

@@ -1,22 +1,27 @@
-<h1>Listing conhecimentos</h1>
+<div id="content_home">
+<div id="box_conhecimentos_home">
+<h1>Conhecimentos cadastrados</h1>
 
-<table>
+<table id="conhecimentos">
   <tr>
+    <th>Autor</th>
     <th>Titulo</th>
     <th>Texto</th>
   </tr>
 
 <% for conhecimento in @conhecimentos %>
   <tr>
+    <td><%=h conhecimento.autor.nome %><%=h conhecimento.id %></td>
     <td><%=h conhecimento.titulo %></td>
     <td><%=h conhecimento.texto %></td>
     <td><%= link_to 'Show', conhecimento %></td>
     <td><%= link_to 'Edit', edit_conhecimento_path(conhecimento) %></td>
-    <td><%= link_to 'Destroy', conhecimento, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Apagar', conhecimento, :confirm => 'Are you sure?', :method => :delete, :id=>"del_conhecimento_#{conhecimento.id}" %></td>
   </tr>
 <% end %>
 </table>
-
+</div>
 <br />
 
-<%= link_to 'New conhecimento', new_conhecimento_path %>
+<%= render :partial => "autors/index"%>
+</div>

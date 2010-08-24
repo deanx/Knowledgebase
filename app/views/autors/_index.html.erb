@@ -1,0 +1,19 @@
+<div id="box_autores_home">
+<h1>Autores cadastrados</h1>
+
+<table id="lista_autores">
+  <tr>
+    <th>Nome</th>
+  </tr>
+
+<% for autor in @autors %>
+  <tr>
+    <td><%=h autor.nome %></td>
+    <td><%= link_to 'Show', autor %></td>
+    <td><%= link_to 'Edit', edit_autor_path(autor) %></td>
+    <td><%= link_to 'Destroy', autor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />

@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Knowledge Base</title>
+<%= stylesheet_link_tag "application" %>
+</head>
+<body>
+<div id="menu_header">
+	<span id="hd_go_home"><%=link_to "Página principal", "/" %></span>
+	<span id="hd_add_new_conhecimento"><%=link_to "Novo conhecimento", new_conhecimento_path %></span>
+	<span id="hd_add_new_autor"><%=link_to "Adicionar autor", new_autor_path %></span>
+</div>
+<%=yield%>
+</body>
+</html>
