@@ -1,14 +1,21 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Knowledge Base</title>
-<%= stylesheet_link_tag "application" %>
+  <title>Base de conhecimento</title>
+  <%= csrf_meta_tag %>
+  <%= javascript_include_tag "/jquery_ui/js/jquery-1.4.2.min.js", "/jquery_ui/js/jquery-ui-1.8.4.custom.min.js", "rails.js", "application.js" %>
+  <%= stylesheet_link_tag "/jquery_ui/css/production/jquery-ui-1.8.4.custom.css", "/jquery_ui/css/production/header.ui.css", "/jquery_ui/css/production/content.ui.css", "estilo.css"%>
+
 </head>
-<body>
-<div id="menu_header">
-	<span id="hd_go_home"><%=link_to "Página principal", "/" %></span>
-	<span id="hd_add_new_conhecimento"><%=link_to "Novo conhecimento", new_conhecimento_path %></span>
-	<span id="hd_add_new_autor"><%=link_to "Adicionar autor", new_autor_path %></span>
+<body bgcolor="#FFF">
+<div class="ui-widget">
+	<div id="menu_header" class="ui-widget-content ui-state-default ui-corner-top">
+		<span id="hd_go_home"><%=link_to "home", "/" %></span>
+		<span id="hd_add_new_conhecimento"><%=link_to "+ conhecimento", new_conhecimento_path %></span>
+		<span id="hd_add_new_autor"><%=link_to "+ autor", new_autor_path %></span>
+	</div>
 </div>
-<%=yield%>
+<%= yield %>
+
 </body>
 </html>

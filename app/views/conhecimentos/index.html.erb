@@ -1,6 +1,5 @@
-<div id="content_home">
-<div id="box_conhecimentos_home">
-<h1>Conhecimentos cadastrados</h1>
+<div id="conteudo" class="ui-widget-content">
+<h4> <span class="ui-icon ui-icon-play"></span>conhecimentos cadastrados</h4>
 
 <table id="conhecimentos">
   <tr>
@@ -14,14 +13,41 @@
     <td><%=h conhecimento.autor.nome %><%=h conhecimento.id %></td>
     <td><%=h conhecimento.titulo %></td>
     <td><%=h conhecimento.texto %></td>
-    <td><%= link_to 'Show', conhecimento %></td>
-    <td><%= link_to 'Edit', edit_conhecimento_path(conhecimento) %></td>
-    <td><%= link_to 'Apagar', conhecimento, :confirm => 'Are you sure?', :method => :delete, :id=>"del_conhecimento_#{conhecimento.id}" %></td>
+    <td><%= link_to '<span class="ui-icon ui-icon-search"></span>mostrar', conhecimento %></td>
+    <td><%= link_to '<span class="ui-icon ui-icon-wrench"></span>editar', edit_conhecimento_path(conhecimento) %></td>
+    <td><%= link_to '<span class="ui-icon ui-icon-close"></span>apagar', "conhecimentos", :id=>"del_conhecimento_#{conhecimento.id}", :class=>"delete", :onclick => "window.href_deletar='/conhecimentos/#{conhecimento.id}'" %></td>
+
+    <td><%= link_to '<span class="ui-icon ui-icon-close"></span>apagar', conhecimento, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-</div>
 <br />
-
-<%= render :partial => "autors/index"%>
 </div>
+
+<div id="confirma_exclusao" title="Excluir?">
+</div>
+<script type="text/javascript">
+	$(document).ready(function()	{
+		$("a.delete").click(function() {
+			$("#confirma_exclusao").dialog('open');
+			return false;
+		})
+
+		$("#confirma_exclusao").dialog({
+			autoOpen:false,
+			height:350,
+			width:350,
+			modal:true,
+			buttons: {
+				"Não": function() { $(this).dialog('close');return false; },
+				"Sim":function() {
+				$.post(window.href_deletar, {_method: "delete", authenticity_token: "<%= form_authenticity_token%>"}, function(data) {
+	alert("fsdf");
+});
+			$("#confirma_exclusao").dialog('close');
+				}
+			}
+		})
+	})
+</script>
+<%= form_authenticity_token %>

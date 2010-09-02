@@ -1,13 +1,9 @@
-<p>
-  <b>Titulo:</b>
-  <%=h @conhecimento.titulo %>
-</p>
-
-<p>
-  <b>Texto:</b>
-  <%=h @conhecimento.texto %>
-</p>
+<div id="conteudo" class="ui-widget-content titulo_detalhes ui-corner-bottom">
+<h4><span class="ui-icon ui-icon-play"></span>detalhes do conhecimento</h4>
+<span class="titulo_detalhes"><%=@conhecimento.titulo%></span>
+<span class="autor_detalhe_conhecimento">(<%=@conhecimento.autor.nome%>)</span>
+<br/>
 
 
-<%= link_to 'Edit', edit_conhecimento_path(@conhecimento) %> |
-<%= link_to 'Back', conhecimentos_path %>
+<p class="texto_detalhes"><%=@conhecimento.texto%></p>
+

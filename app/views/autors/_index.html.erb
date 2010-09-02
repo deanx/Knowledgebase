@@ -1,19 +1,17 @@
-<div id="box_autores_home">
-<h1>Autores cadastrados</h1>
+<div id="conteudo" class="ui-widget-content ui-corner-bottom">
+<h4><span class="ui-icon ui-icon-play"></span>autores cadastrados</h4>
 
-<table id="lista_autores">
+<table>
   <tr>
     <th>Nome</th>
   </tr>
 
-<% for autor in @autors %>
+<% @autors.each do |autor| %>
   <tr>
-    <td><%=h autor.nome %></td>
-    <td><%= link_to 'Show', autor %></td>
-    <td><%= link_to 'Edit', edit_autor_path(autor) %></td>
-    <td><%= link_to 'Destroy', autor, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to autor.nome, autor %></td>
+    <td><%= link_to 'Editar', edit_autor_path(autor) %></td>
+    <td><%= link_to 'Apagar', autor, :method => :delete, :remote => true, :id => "link_excluir_#{autor.id}", :class => "link_excluir" %></td>
   </tr>
 <% end %>
 </table>
 </div>
-<br />

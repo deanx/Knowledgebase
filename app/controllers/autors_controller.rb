@@ -1,12 +1,8 @@
-require "inherited_resources"
-class AutorsController < InheritedResources::Base
-#require "inherited_resources"
-#class ConhecimentosController < InheritedResources::Base
-
+class AutorsController < ApplicationController
   # GET /autors
   # GET /autors.xml
   def index
-    @autors = Autor.find(:all)
+    @autors = Autor.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -48,8 +44,7 @@ class AutorsController < InheritedResources::Base
 
     respond_to do |format|
       if @autor.save
-        flash[:notice] = 'Autor was successfully created.'
-        format.html { redirect_to(@autor) }
+        format.html { redirect_to(@autor, :notice => 'Autor was successfully created.') }
         format.xml  { render :xml => @autor, :status => :created, :location => @autor }
       else
         format.html { render :action => "new" }
@@ -65,8 +60,7 @@ class AutorsController < InheritedResources::Base
 
     respond_to do |format|
       if @autor.update_attributes(params[:autor])
-        flash[:notice] = 'Autor was successfully updated.'
-        format.html { redirect_to(@autor) }
+        format.html { redirect_to(@autor, :notice => 'Autor was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
