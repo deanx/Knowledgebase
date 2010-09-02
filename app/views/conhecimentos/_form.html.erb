@@ -1,0 +1,8 @@
+<%= simple_form_for(@conhecimento, :remote => true) do |f| %>
+	<label for="txt_titulo" class="lbl_form">Título</label>
+    	<%= f.input :titulo, :required => true, :label => false, :input_html => {:size=>"30", :id=>"txt_titulo", :maxlength=>"50"}%>
+	<label for="txt_texto" class="lbl_form">Texto</label>
+	<%= f.input :texto, :required => :true, :label => false, :input_html => {:id => "txt_texto", :rows=>"12", :cols=>"60"} %>
+        <div id="div_btn_send_conhecimento"><%= f.button :submit, :remote=>true, :value=>"cadastrar", :id => "btn_send_conhecimento"%></div>
+	
+<% end %>

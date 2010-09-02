@@ -1,0 +1,9 @@
+#menu_header span a {
+	margin:10px 10px 10px 30px;
+	font-size:11pt;
+}
+
+#menu_header span a:hover {
+	color:white;
+}
+

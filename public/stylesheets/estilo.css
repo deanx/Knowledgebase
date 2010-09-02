@@ -1,0 +1,45 @@
+.autor_detalhe_conhecimento,
+.titulo_detalhes,
+.texto_detalhes {
+	color:white;
+	padding-left:1px;
+	font-size:11pt;
+	font-family:arial;
+	font-weight:normal;
+}
+
+.titulo_detalhes	{
+	font-weight:bold;
+	padding-bottom:10px;
+	float:none;
+	padding-left:10px;
+
+}
+
+.texto_detalhes	{
+	padding-left:10px;
+}
+
+.span_input {
+	width:300px;
+}
+
+label.lbl_form{
+	font-family:arial;
+	font-weight:thin;
+	font-size:10pt;
+}
+
+#btn_send_conhecimento	{
+	margin-bottom:10px;
+}
+
+#div_btn_send_conhecimento	{
+	width:445px;
+	text-align:right;
+	padding-top:10px;
+}
+
+#new_conhecimento {
+	margin-left:10px;
+}
