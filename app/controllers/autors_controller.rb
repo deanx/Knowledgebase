@@ -46,9 +46,11 @@ class AutorsController < ApplicationController
       if @autor.save
         format.html { redirect_to(@autor, :notice => 'Autor was successfully created.') }
         format.xml  { render :xml => @autor, :status => :created, :location => @autor }
+	format.js {render :layout=>false}
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @autor.errors, :status => :unprocessable_entity }
+	format.js {render :layout=>false}
       end
     end
   end
@@ -62,9 +64,11 @@ class AutorsController < ApplicationController
       if @autor.update_attributes(params[:autor])
         format.html { redirect_to(@autor, :notice => 'Autor was successfully updated.') }
         format.xml  { head :ok }
+	format.js { render :layout => false }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @autor.errors, :status => :unprocessable_entity }
+	format.js { render :layout => false }
       end
     end
   end

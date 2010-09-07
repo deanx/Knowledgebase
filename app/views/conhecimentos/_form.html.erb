@@ -2,12 +2,22 @@
 	<label for="txt_titulo" class="lbl_form">Título</label>
     	<%= f.input :titulo, :required => true, :label => false, :input_html => {:size=>"30", :id=>"txt_titulo", :maxlength=>"50"}%>
 
-	<label for="txt_texto" class="lbl_form">Autor</label>
+	<label for="select_autor" class="lbl_form">Autor</label>
 	<%= f.association :autor, :label => false, :as => :select, :label_method => :nome, :input_html => {:id => "select_autor"} %>
 
+	<label for="select_categoria" class="lbl_form">Categoria</label>
+	<%= f.association :categoria, :label => false, :as => select, :label_method => :nome_categoria %>
 	<label for="txt_texto" class="lbl_form">Texto</label>
 	<%= f.input :texto, :required => :true, :label => false, :input_html => {:id => "txt_texto", :rows=>"12", :cols=>"60"} %>
 
-        <div id="div_btn_send_conhecimento"><%= f.button :submit, :remote=>true, :value=>"enviar", :id => "btn_send_conhecimento"%></div>
+        <div id="div_btn_send"><%= f.button :submit, :remote=>true, :value=>"enviar", :id => "btn_send_conhecimento"%></div>
 	
 <% end %>
+
+<div id="dialog" title="Inserção de autor" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Inserção feita com sucesso</p>
+</div>
+
+<div id="dialog_error" title="Inserção de autor" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Problemas ao inserir conhecimento</p>
+</div>

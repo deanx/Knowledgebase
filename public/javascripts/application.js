@@ -24,7 +24,7 @@ $(document).ready(function()	{
 					'Sim, desejo excluir': function() { 
 						window.id_excluir_habilitado = id_link;
 						$("#" + id_link).trigger('click');
-						$("#" + id_link).parents("tr").fadeOut("fast");
+						$("#" + id_link).parents("tr").fadeOut("slow");
 						$(this).dialog("close");
 						
 					},
@@ -34,6 +34,7 @@ $(document).ready(function()	{
 
 		}
 	})
+
 
 })
 

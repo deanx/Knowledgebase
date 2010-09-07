@@ -1,4 +1,6 @@
 KnowledgeBase::Application.routes.draw do
+  resources :categorias
+
   resources :conhecimentos
 
   resources :autors

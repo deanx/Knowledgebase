@@ -1,17 +1,15 @@
-<%= form_for(@autor) do |f| %>
-  <% if @autor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@autor.errors.count, "error") %> prohibited this autor from being saved:</h2>
+<%= simple_form_for(@autor, :remote => true) do |f| %>
+	<label for="nome_autor" class="lbl_form">Nome do autor</label>
+	<%= f.input :nome, :required => true, :label => false, :input_html => {:size=>"30", :id=>"txt_titulo", :maxlength=>"50"}%>
 
-      <ul>
-      <% @autor.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<div id="div_btn_send"><%= f.button :submit, :value => "enviar" %></div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
+
+<div id="dialog" title="Inserção de conhecimento" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Inserção feita com sucesso</p>
+</div>
+
+<div id="dialog_error" title="Inserção de conhecimento" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Problemas ao inserir conhecimento</p>
+</div>
