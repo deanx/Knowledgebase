@@ -6,7 +6,7 @@
 	<%= f.association :autor, :label => false, :as => :select, :label_method => :nome, :input_html => {:id => "select_autor"} %>
 
 	<label for="select_categoria" class="lbl_form">Categoria</label>
-	<%= f.association :categoria, :label => false, :as => select, :label_method => :nome_categoria %>
+	<%= f.association :categoria, :label => false, :as => :select, :label_method => :nome_categoria, :input_html => {:id => "select_categoria"} %>
 	<label for="txt_texto" class="lbl_form">Texto</label>
 	<%= f.input :texto, :required => :true, :label => false, :input_html => {:id => "txt_texto", :rows=>"12", :cols=>"60"} %>
 

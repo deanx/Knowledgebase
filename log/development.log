@@ -29109,3 +29109,158 @@ Migrating to AddCategoriaIdToConhecimentos (20100905132220)
   [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `categorias`[0m
   [1m[35mSQL (1.7ms)[0m  describe `conhecimentos`
   [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `conhecimentos`[0m
+
+
+Started GET "/" for 127.0.0.1 at Tue Sep 07 11:30:13 -0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mConhecimento Load (166.8ms)[0m  [1mSELECT id, titulo, autor_id FROM `conhecimentos` ORDER BY id DESC[0m
+  [1m[35mAutor Load (5.1ms)[0m  SELECT `autors`.* FROM `autors` ORDER BY id DESC
+  [1m[36mAutor Load (0.3ms)[0m  [1mSELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1[0m
+  [1m[35mAutor Load (0.3ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+Rendered conhecimentos/_index.html.erb (1066.0ms)
+Rendered autors/_index.html.erb (2285.0ms)
+Rendered home/index.html.erb within layouts/application (3400.7ms)
+Completed 200 OK in 4447ms (Views: 3470.7ms | ActiveRecord: 172.7ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:30:27 -0300 2010
+  Processing by ConhecimentosController#new as HTML
+  [1m[36mAutor Load (25.3ms)[0m  [1mSELECT `autors`.* FROM `autors`[0m
+Rendered conhecimentos/_form.html.erb (91.0ms)
+Rendered conhecimentos/new.html.erb within layouts/application (95.0ms)
+Completed   in 112ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 3)):
+    6: 	<%= f.association :autor, :label => false, :as => :select, :label_method => :nome, :input_html => {:id => "select_autor"} %>
+    7: 
+    8: 	<label for="select_categoria" class="lbl_form">Categoria</label>
+    9: 	<%= f.association :categoria, :label => false, :as => select, :label_method => :nome_categoria %>
+    10: 	<label for="txt_texto" class="lbl_form">Texto</label>
+    11: 	<%= f.input :texto, :required => :true, :label => false, :input_html => {:id => "txt_texto", :rows=>"12", :cols=>"60"} %>
+    12: 
+  app/views/conhecimentos/_form.html.erb:9:in `select'
+  app/views/conhecimentos/_form.html.erb:9:in `_app_views_conhecimentos__form_html_erb___837470920__617232468_529776'
+  app/views/conhecimentos/_form.html.erb:1:in `_app_views_conhecimentos__form_html_erb___837470920__617232468_529776'
+  app/views/conhecimentos/new.html.erb:4:in `_app_views_conhecimentos_new_html_erb__918441958__617227848_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.7ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:32:21 -0300 2010
+  Processing by ConhecimentosController#new as HTML
+  [1m[35mAutor Load (0.5ms)[0m  SELECT `autors`.* FROM `autors`
+Rendered conhecimentos/_form.html.erb (345.3ms)
+Rendered conhecimentos/new.html.erb within layouts/application (370.8ms)
+Completed 200 OK in 394ms (Views: 389.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:32:52 -0300 2010
+  Processing by ConhecimentosController#new as HTML
+  [1m[36mAutor Load (0.2ms)[0m  [1mSELECT `autors`.* FROM `autors`[0m
+Rendered conhecimentos/_form.html.erb (43.9ms)
+Rendered conhecimentos/new.html.erb within layouts/application (46.8ms)
+Completed   in 70ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 3)):
+    6: 	<%= f.association :autor, :label => false, :as => :select, :label_method => :nome, :input_html => {:id => "select_autor"} %>
+    7: 
+    8: 	<label for="select_categoria" class="lbl_form">Categoria</label>
+    9: 	<%= f.association :categoria, :label => false, :as => select, :label_method => :nome_categoria, input_html => {:id => "select_categoria"} %>
+    10: 	<label for="txt_texto" class="lbl_form">Texto</label>
+    11: 	<%= f.input :texto, :required => :true, :label => false, :input_html => {:id => "txt_texto", :rows=>"12", :cols=>"60"} %>
+    12: 
+  app/views/conhecimentos/_form.html.erb:9:in `select'
+  app/views/conhecimentos/_form.html.erb:9:in `_app_views_conhecimentos__form_html_erb___837470920__617155448_529776'
+  app/views/conhecimentos/_form.html.erb:1:in `_app_views_conhecimentos__form_html_erb___837470920__617155448_529776'
+  app/views/conhecimentos/new.html.erb:4:in `_app_views_conhecimentos_new_html_erb__918441958__617150678_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.6ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:34:05 -0300 2010
+  Processing by ConhecimentosController#new as HTML
+  [1m[35mAutor Load (0.2ms)[0m  SELECT `autors`.* FROM `autors`
+Rendered conhecimentos/_form.html.erb (119.7ms)
+Rendered conhecimentos/new.html.erb within layouts/application (122.1ms)
+Completed   in 134ms
+
+ActionView::Template::Error (undefined local variable or method `input_html' for #<#<Class:0xb65a9090>:0xb65a80dc>):
+    6: 	<%= f.association :autor, :label => false, :as => :select, :label_method => :nome, :input_html => {:id => "select_autor"} %>
+    7: 
+    8: 	<label for="select_categoria" class="lbl_form">Categoria</label>
+    9: 	<%= f.association :categoria, :label => false, :as => :select, :label_method => :nome_categoria, input_html => {:id => "select_categoria"} %>
+    10: 	<label for="txt_texto" class="lbl_form">Texto</label>
+    11: 	<%= f.input :texto, :required => :true, :label => false, :input_html => {:id => "txt_texto", :rows=>"12", :cols=>"60"} %>
+    12: 
+  app/views/conhecimentos/_form.html.erb:9:in `_app_views_conhecimentos__form_html_erb___837470920__617804378_529776'
+  app/views/conhecimentos/_form.html.erb:1:in `_app_views_conhecimentos__form_html_erb___837470920__617804378_529776'
+  app/views/conhecimentos/new.html.erb:4:in `_app_views_conhecimentos_new_html_erb__918441958__617793408_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.6ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:34:13 -0300 2010
+  Processing by ConhecimentosController#new as HTML
+  [1m[36mAutor Load (0.5ms)[0m  [1mSELECT `autors`.* FROM `autors`[0m
+Rendered conhecimentos/_form.html.erb (71.9ms)
+Rendered conhecimentos/new.html.erb within layouts/application (75.8ms)
+Completed   in 96ms
+
+ActionView::Template::Error (Association :categoria not found):
+    6: 	<%= f.association :autor, :label => false, :as => :select, :label_method => :nome, :input_html => {:id => "select_autor"} %>
+    7: 
+    8: 	<label for="select_categoria" class="lbl_form">Categoria</label>
+    9: 	<%= f.association :categoria, :label => false, :as => :select, :label_method => :nome_categoria, :input_html => {:id => "select_categoria"} %>
+    10: 	<label for="txt_texto" class="lbl_form">Texto</label>
+    11: 	<%= f.input :texto, :required => :true, :label => false, :input_html => {:id => "txt_texto", :rows=>"12", :cols=>"60"} %>
+    12: 
+  app/views/conhecimentos/_form.html.erb:9:in `_app_views_conhecimentos__form_html_erb___837470920__617288138_529776'
+  app/views/conhecimentos/_form.html.erb:1:in `_app_views_conhecimentos__form_html_erb___837470920__617288138_529776'
+  app/views/conhecimentos/new.html.erb:4:in `_app_views_conhecimentos_new_html_erb__918441958__617280478_0'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (51.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (66.6ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:35:01 -0300 2010
+
+ActionController::RoutingError (undefined method `assert_valid_keys' for :categoria:Symbol):
+  app/models/conhecimento.rb:2
+  app/controllers/conhecimentos_controller.rb:1
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:35:20 -0300 2010
+  Processing by ConhecimentosController#new as HTML
+  [1m[35mAutor Load (0.5ms)[0m  SELECT `autors`.* FROM `autors`
+  [1m[36mCategoria Load (1.1ms)[0m  [1mSELECT `categorias`.* FROM `categorias`[0m
+Rendered conhecimentos/_form.html.erb (228.3ms)
+Rendered conhecimentos/new.html.erb within layouts/application (241.3ms)
+Completed 200 OK in 262ms (Views: 248.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/conhecimentos/new" for 127.0.0.1 at Tue Sep 07 11:36:25 -0300 2010
+  Processing by ConhecimentosController#new as HTML
+  [1m[35mAutor Load (0.2ms)[0m  SELECT `autors`.* FROM `autors`
+  [1m[36mCategoria Load (0.5ms)[0m  [1mSELECT `categorias`.* FROM `categorias`[0m
+Rendered conhecimentos/_form.html.erb (82.4ms)
+Rendered conhecimentos/new.html.erb within layouts/application (93.2ms)
+Completed 200 OK in 111ms (Views: 101.7ms | ActiveRecord: 0.7ms)
