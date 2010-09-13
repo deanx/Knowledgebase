@@ -13,6 +13,22 @@
 		<span id="hd_go_home"><%=link_to "home", "/" %></span>
 		<span id="hd_add_new_conhecimento"><%=link_to "+ conhecimento", new_conhecimento_path %></span>
 		<span id="hd_add_new_autor"><%=link_to "+ autor", new_autor_path %></span>
+		<span id="hd_pesquisa">
+		<form method="post" action="/home/pesquisa" id="frm_pesquisa" style="display:inline">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+			pesquisar:
+			<input type="text" name="txt_pesquisa" id="txt_pesquisa" class="ui-corner-all" value="<%=params[:txt_pesquisa]%>"/>
+			<select name="tp_pesquisa" id="tp_pesquisa" class="ui-corner-all">
+				<option value="">tudo</option>
+				<option value="c">categorias</option>
+				<option value="a">autores</option>
+				<option value="co">conhecimentos</option>
+			</select>
+			
+		</span>
+		<span id="spn_btn_pesquisa" class="ui-icon ui-icon-play" style="display:inline-block;cursor:pointer" onclick="$('#frm_pesquisa').submit()">
+		</form>
+		</span>
 	</div>
 </div>
 <%= yield %>

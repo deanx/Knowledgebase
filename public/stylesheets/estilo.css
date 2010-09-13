@@ -43,3 +43,42 @@ label.lbl_form{
 #conteudo form {
 	margin-left:10px;
 }
+
+#hd_pesquisa {
+	margin-left:100px;
+	color:white;
+	font-size:10pt;
+}
+
+#hd_pesquisa input {
+	color:white;
+	background-color:black;
+	border:1px solid #999;
+	margin-left:10px;
+	padding-left:10px;
+}
+
+#hd_pesquisa select {
+	color:white;
+	background-color:black;
+	border:1px solid #999;
+	margin-left:10px;
+	padding-left:10px;
+}
+
+*.btn_pesquisa	{
+	border:0px none;
+	color:white;
+	width:18px;
+	height:18px;
+
+}
+
+*.pagination {
+	font-family:arial;
+	font-size:10pt;
+	background-color:black;
+	color:black;
+	padding-left:10px;
+}
+

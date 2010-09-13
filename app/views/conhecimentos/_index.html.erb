@@ -4,16 +4,19 @@
 <table>
   <tr>
     <th>Autor / Titulo</th>
+    <th>Categoria</th>
   </tr>
 <% @conhecimentos.each do |conhecimento| %>
   <tr>
     <td><%= link_to "#{conhecimento.autor.nome} / #{conhecimento.titulo}", conhecimento %></td>
+    <td><%= link_to "#{conhecimento.categoria.nome_categoria}", conhecimento %></td>
     <td><%= link_to 'Editar', edit_conhecimento_path(conhecimento) %></td>
     <td><%= link_to 'Apagar', conhecimento,:method => :delete, :remote => true, :id=>"link_excluir_#{conhecimento.id}", :class=>"link_excluir"%></td>
   </tr>
 <% end %>
 </table>
 </div>
+<%= will_paginate @conhecimentos,:param_name => "pagina_conhecimentos", :previous_label => "anterior",:next_label => "próximo",:class => "ui-widget-header pagination" %>
 
 <div id="dialog-confirm" title="Confirma essa exclusão?" style="display:none">
 	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Esse dado será removido permanentemente</p>

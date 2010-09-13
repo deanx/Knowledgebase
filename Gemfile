@@ -7,7 +7,7 @@ gem 'inherited_resources', '1.1.2'
 
 gem 'mysql2'
 gem 'simple_form', '1.2.2'
-
+gem 'will_paginate', '3.0.pre2'
 # Use unicorn as the web server
 # gem 'unicorn'
 
