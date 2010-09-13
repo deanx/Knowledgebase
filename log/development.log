@@ -38683,3 +38683,38 @@ Rendered autors/_index.html.erb (91.0ms)
 Rendered categorias/_index.html.erb (34.3ms)
 Rendered home/index.html.erb within layouts/application (226.9ms)
 Completed 200 OK in 279ms (Views: 231.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/?pagina_categorias=2" for 127.0.0.1 at Mon Sep 13 09:44:34 -0300 2010
+  Processing by HomeController#index as HTML
+  Parameters: {"pagina_categorias"=>"2"}
+  [1m[36mConhecimento Load (2.7ms)[0m  [1mSELECT id, titulo, autor_id, categoria_id FROM `conhecimentos` ORDER BY id DESC LIMIT 0, 10[0m
+  [1m[35mSQL (1.7ms)[0m  SELECT COUNT(*) AS count_id FROM `conhecimentos`
+  [1m[36mAutor Load (0.3ms)[0m  [1mSELECT `autors`.* FROM `autors` ORDER BY id DESC LIMIT 0, 10[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM `autors`
+  [1m[36mCategoria Load (40.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` ORDER BY id DESC LIMIT 10, 10[0m
+  [1m[35mAutor Load (0.2ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1
+  [1m[36mCategoria Load (0.1ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.8ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 4) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mAutor Load (0.2ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.5ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `autors`.* FROM `autors` WHERE (`autors`.`id` = 16) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `categorias`.* FROM `categorias` WHERE (`categorias`.`id` = 2) LIMIT 1[0m
+Rendered conhecimentos/_index.html.erb (145.4ms)
+Rendered autors/_index.html.erb (45.3ms)
+Rendered categorias/_index.html.erb (19.5ms)
+Rendered home/index.html.erb within layouts/application (348.1ms)
+Completed 200 OK in 756ms (Views: 398.1ms | ActiveRecord: 46.9ms)
