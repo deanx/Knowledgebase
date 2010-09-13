@@ -1,5 +1,12 @@
-<h1>New categoria</h1>
-
+<div id="conteudo" class="ui-widget-content ui-corner-bottom">
+<h4><span class="ui-icon ui-icon-play"></span>Adicionar categoria</h4>
 <%= render 'form' %>
+</div>
 
-<%= link_to 'Back', categorias_path %>
+<div id="dialog" title="Inserção de categoria" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Inserção feita com sucesso</p>
+</div>
+
+<div id="dialog_error" title="Inserção de categoria" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Problemas ao inserir categoria</p>
+</div>

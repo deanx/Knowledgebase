@@ -1,0 +1,21 @@
+<div id="conteudo" class="ui-widget-content" style="border:1px solid black">
+<h4><span class="ui-icon ui-icon-play"></span>categorias cadastradas</h4>
+<table>
+  <tr>
+    <th>Nome categoria</th>
+  </tr>
+
+<% @categorias.each do |categoria| %>
+  <tr>
+    <td><%= link_to "#{categoria.nome_categoria}", categoria %></td>
+    <td><%= link_to 'Editar', edit_categoria_path(categoria) %></td>
+    <td><%= link_to 'Apagar', categoria,:method => :delete, :remote => true, :id=>"link_excluir_#{categoria.id}", :class=>"link_excluir"%></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<%= will_paginate @categorias,:param_name => "pagina_categorias", :previous_label => "anterior",:next_label => "próximo",:class => "ui-widget-header pagination" %>
+
+
+<div id="div_rodape" class="ui-widget-header ui-corner-bottom" style="border:1px solid black;background-color:black;background-image:none"><br/></div>
+

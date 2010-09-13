@@ -13,6 +13,7 @@
 		<span id="hd_go_home"><%=link_to "home", "/" %></span>
 		<span id="hd_add_new_conhecimento"><%=link_to "+ conhecimento", new_conhecimento_path %></span>
 		<span id="hd_add_new_autor"><%=link_to "+ autor", new_autor_path %></span>
+		<span id="hd_add_new_autor"><%=link_to "+ categoria", new_categoria_path %></span>
 		<span id="hd_pesquisa">
 		<form method="post" action="/home/pesquisa" id="frm_pesquisa" style="display:inline">
 			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>

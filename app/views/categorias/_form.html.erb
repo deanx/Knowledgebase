@@ -1,11 +1,15 @@
-<%= simple_form_for(@categoria) do |f| %>
+<%= simple_form_for(@categoria, :remote => true) do |f| %>
+	<label for="nome_categoria" class="lbl_form">Nome da categoria</label>
+	<%= f.input :nome_categoria, :required => true, :label => false, :input_html => {:size=>"30", :id=>"txt_titulo", :maxlength=>"50"}%>
 
+	<div id="div_btn_send"><%= f.button :submit, :value => "enviar" %></div>
 
-  <div class="inputs">
-    <%= f.input :nome_categoria %>
-  </div>
-
-  <div class="actions">
-    <%= f.button :submit %>
-  </div>
 <% end %>
+
+<div id="dialog" title="Inserção de categoria" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Inserção feita com sucesso</p>
+</div>
+
+<div id="dialog_error" title="Inserção de categoria" style="display:none">
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Problemas ao inserir conhecimento</p>
+</div>

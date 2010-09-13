@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   def index
 	@conhecimentos = Conhecimento.paginate :page=>params[:pagina_conhecimentos], :order => "id DESC", :select => "id, titulo, autor_id, categoria_id"
 	@autors = Autor.paginate :order => "id DESC", :page => params[:pagina_autores]
+	@categorias = Categoria.paginate :order => "id DESC", :page => params[:pagina_categorias]
   end
 
   def pesquisa
