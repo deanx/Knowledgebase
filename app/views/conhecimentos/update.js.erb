@@ -1,0 +1,31 @@
+<% if @conhecimento.errors.any? %>
+			$("#dialog_error").dialog({
+				resizable:false,
+				height:240,
+				width:500,
+				modal: true,
+				buttons: {
+					'fechar': function() { 
+						window.location.href="/";
+						$(this).dialog("close");
+						
+					}
+				}
+			})
+
+<% else %>
+
+			$("#dialog").dialog({
+				resizable:false,
+				height:240,
+				width:500,
+				modal: true,
+				buttons: {
+					'Ok': function() { 
+						window.location.href="/";
+						$(this).dialog("close");
+						
+					}
+				}
+			})
+<% end %> 
